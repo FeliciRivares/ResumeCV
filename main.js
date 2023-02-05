@@ -47,6 +47,18 @@ function scrollActive(){
 }
 window.addEventListener('scroll', scrollActive)
 
+// show scrol top
+function scrollTop() {
+    const scrollTop = document.getElementById('scroll-top');
+
+    if(this.scrollY >= 200){
+        scrollTop.classList.add('show-scroll');
+    }else{
+        scrollTop.classList.remove('show-scroll');
+    }
+}
+window.addEventListener('scroll', scrollTop);
+
 // DARK LIGHT THEME
 
 
@@ -77,4 +89,32 @@ themeButton.addEventListener('click', () => {
     // We save the theme and the current icon that the user chose
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())
+})
+// add scaleCV for pdf and remove it 
+function scaleCV(){
+    document.body.classList.add('scale-cv')
+}
+
+function removeScaleCV(){
+    document.body.classList.remove('scale-cv')
+}
+let resumeArea = document.getElementById('area-cv');
+let resumeButton = document.getElementById('resume-button');
+
+let opt = {
+    margin:       0,
+    filename:     'Karina Ostrovska.pdf',
+    image:        { type: 'jpeg', quality: 0.98 },
+    html2canvas:  { scale: 4 },
+    jsPDF:        { format: 'a4', orientation: 'portrait' }
+  };
+
+function generateResume(){
+    html2pdf(resumeArea, opt)
+}
+
+resumeButton.addEventListener('click', () =>{
+    scaleCV();
+    generateResume();
+    setTimeout(removeScaleCV, 5000)
 })
