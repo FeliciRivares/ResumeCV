@@ -61,28 +61,28 @@ html{
     max-width: 595px;
 }
 .scale-cv .section{
-    padding: 1.5rem 0 .80rem;
+    padding: .8rem 0 .80rem;
 }
 .scale-cv .section-title{
-    margin-bottom: .75rem;
+    margin-bottom: .6rem;
 }
 .scale-cv .resume__right,
 .scale-cv .resume__left{
-    padding: 0 1rem;
+    padding: 0 .8rem;
 }
 .scale-cv .home__img{
     width: 90px;
     height: 90px;
 }
 .scale-cv .home__container{
-    gap: 1.5rem;
+    gap: 1.3rem;
 }
 .scale-cv .home__data{
-    gap: .25rem;
+    gap: .2rem;
 }
 .scale-cv .home__adress,
 .scale-cv .social__container{
-    gap: .75rem;
+    gap: .6rem;
 }
 .scale-cv .home__icon,
 .scale-cv .social__icon,
@@ -92,7 +92,7 @@ html{
 .scale-cv .education__container,
 .scale-cv .experience__container,
 .scale-cv .certificate__container{
-    gap: 1rem;
+    gap: .8rem;
 }
 .scale-cv .education__time,
 .scale-cv .experience__time{
@@ -118,8 +118,9 @@ html{
     margin-bottom: var(--mb-1);
 }
 .scale-cv .interests__container{
-    column-gap: 2.5rem;
+    column-gap: 2rem;
 }
+
 body{
     margin: 0 0 var(--header-height) 0;
     padding: 0;
@@ -129,10 +130,10 @@ body{
     color: var(--text-color);
 }
 body.scale-cv{
-    --h1-font-size: .938rem;
-    --h2-font-size: .938rem;
-    --h3-font-size: .875rem;
-    --normal-font-size: .813rem;
+    --h1-font-size: .850rem;
+    --h2-font-size: .820rem;
+    --h3-font-size: .750rem;
+    --normal-font-size: .760rem;
     --small-font-size: .75rem;
     --smaller-font-size: .688rem;
 }
@@ -501,6 +502,7 @@ img{
 /* -------expereience end---------- */
 
 /* --------certificate start--------- */
+
 
 .work__content:last-child {
     display: flex;
